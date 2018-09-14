@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
     @line_items = LineItem.where("order_id" => @order.id)
   end
 
-  def product_info variable
-    Product.find(variable.product_id)
+  def product_info item
+    Product.find(item.product_id)
   end
   helper_method :product_info
 
