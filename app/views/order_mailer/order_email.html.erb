@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <% @line_items.each do |item| %>
+        <li> You ordered <%= item.quantity %> <%= (product_info item).name %>(s).</li>
+      <% end %>
+    </ul>
+    <p>Your Total was: $<%= @order.total_cents / 100.00 %></p>
+  </body>
+</html>
