@@ -21,6 +21,18 @@ end
 
 # Let's do this ...
 
+## USERS
+
+puts "Creating users"
+
+User.destroy_all
+
+User.create!({
+  id: 1,
+  email: 'test@test.com',
+  password_digest: '$2a$10$Nn/gBt63Wa/gbhdLdvxGhuC5WlsL5szTyAMfhOguTrsvGk./QiY8G'
+})
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
@@ -83,7 +95,6 @@ cat1.products.create!({
   price: 224.50
 })
 
-
 cat2.products.create!({
   name:  'Modern Skateboards',
   description: Faker::Hipster.paragraph(4),
@@ -140,51 +151,23 @@ Review.destroy_all
 
 Review.create!({
   product_id: 1,
-  user_id: 2,
-  description: 'I enjoy this',
-  rating: 3
-})
-
-Review.create!({
-  product_id: 1,
   user_id: 1,
-  description: 'This sucks!',
-  rating: 1
-})
-
-Review.create!({
-  product_id: 1,
-  user_id: 3,
-  description: 'This is superb',
+  description: 'I enjoy thing',
   rating: 3
 })
 
 Review.create!({
   product_id: 2,
   user_id: 1,
-  description: 'I am liking this',
-  rating: 5
-})
-
-Review.create!({
-  product_id: 2,
-  user_id: 2,
   description: 'This is fine',
   rating: 4
 })
 
 Review.create!({
   product_id: 3,
-  user_id: 2,
+  user_id: 1,
   description: 'I love lamp',
   rating: 2
-})
-
-Review.create!({
-  product_id: 3,
-  user_id: 3,
-  description: 'Just no.',
-  rating: 1
 })
 
 puts "DONE!"
