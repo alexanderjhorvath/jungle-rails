@@ -23,16 +23,21 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
-        <dt>Submit Review</dt>
-        <%= form_for ([@product, Review.new])  do |f| %>
-          <dd><%= f.text_area :description %></dd>
-          <dd>Rating: <%= f.select :rating, [1, 2, 3, 4, 5] %></dd>
-          <dd><%= submit_tag "Submit" %></dd>
+        <% if current_user %>
+        <h4>Submit Review:</h4>
+          <%= form_for ([@product, Review.new])  do |f| %>
+            <dd><%= f.text_area :description %></dd>
+            <dd>Rating: <%= f.select :rating, [1, 2, 3, 4, 5] %></dd>
+            <dd><%= f.submit 'Submit Review', class: 'btn btn-primary' %></dd>
+          <% end %>
         <% end %>
         <h4>Reviews:</h4>
-        <% @reviews.each do |review| %>
-        <p>Rating: <%= review.rating %> of 5</p>
-        <p>Description: <%=review.description %></p>
+        <% @reviews.reverse.each do |review| %>
+        <dd>Rating: <%= review.rating %> of 5</dd>
+        <dd>Description: <%=review.description %></dd>
+          <% if review.user_id == current_user.id %>
+            <dd><%= button_to 'Delete', product_review_path(@product, review.id), method: :delete, class: 'btn btn-danger'%></dd>
+          <% end %>
         <% end %>
       </div>
     </div>
