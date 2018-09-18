@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Screenshots
+
+!["screenshot of main page"](https://github.com/tantousha/TinyApp/blob/master/docs/screenshot1.png)
+!["screenshot Product details page"](https://github.com/tantousha/TinyApp/blob/master/docs/screenshot2.png)
+!["screenshot of Add product page"](https://github.com/tantousha/TinyApp/blob/master/docs/screenshot3.png)
 
 ## Setup
 
@@ -17,7 +22,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Stripe Testing
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Use Credit Card # 4242 4242 4242 4242 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
