@@ -4,9 +4,9 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Screenshots
 
-!["screenshot of main page"](https://github.com/tantousha/TinyApp/blob/master/public/docs/screenshot1.png)
-!["screenshot Product details page"](https://github.com/tantousha/TinyApp/blob/master/public/docs/screenshot2.png)
-!["screenshot of Add product page"](https://github.com/tantousha/TinyApp/blob/master/public/docs/screenshot3.png)
+!["screenshot of main page"](https://github.com/alexanderjhorvath/jungle-rails/blob/master/public/docs/screenshot1.png)
+!["screenshot Product details page"](https://github.com/alexanderjhorvath/jungle-rails/blob/master/public/docs/screenshot2.png)
+!["screenshot of Add product page"](https://github.com/alexanderjhorvath/jungle-rails/blob/master/public/docs/screenshot3.png)
 
 ## Setup
 
