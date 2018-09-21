@@ -34,5 +34,11 @@ RSpec.describe User, type: :model, js: true do
       subject.email = 'test@test.com'
       expect(subject).to_not be_valid
     end
+
+    it 'is with a password shorter than 6 characters' do
+      subject.password = '12345'
+      subject.password_confirmation = '12345'
+      expect(subject).to_not be_valid
+    end
   end
 end
